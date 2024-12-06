@@ -97,8 +97,8 @@ unsigned int pass_ctyler::execute(function *)
 
 	    if(node->next)
 	    {
-		fprintf(dump_file, "node_next exists\n");
-		fprintf(dump_file, "Node_Next === %s\n", node->next->name());
+          fprintf(dump_file, "node_next exists\n");
+          fprintf(dump_file, "Node_Next === %s\n", node->next->name());
 	    } else {
 	    	fprintf(dump_file, "node->next doesn't exist\n");
 	    }
@@ -107,7 +107,7 @@ unsigned int pass_ctyler::execute(function *)
 	    // Iterate through clones if applicable
 	    if(!node->clones)
 	    {
-		fprintf(dump_file, "No Clones\n");
+		    fprintf(dump_file, "No Clones\n");
 	    }
 
 	    for (clone_node = (cgraph_node *)node->clones; clone_node; clone_node = (cgraph_node *)clone_node->next)
